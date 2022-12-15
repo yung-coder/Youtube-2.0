@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = () => {
     <>
       <div className="flex justify-between border md:p-4">
         <div className="flex justify-center items-center space-x-4">
-          <GiHamburgerMenu color="white" className="hidden md:block" />
+          <GiHamburgerMenu color="white" className="block  md:hidden" />
           <h1 className="text-red-700">Youtube</h1>
         </div>
         <div className="flex  justify-center items-center">

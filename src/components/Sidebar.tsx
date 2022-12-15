@@ -11,7 +11,7 @@ type SidebarProps = {};
 const Sidebar: React.FC<SidebarProps> = () => {
   return (
     <>
-      <div className="flex flex-col text-white border w-60">
+      <div className="md:flex flex-col text-white border w-60 hidden">
         <ul className="p-5 flex flex-col space-y-12 cursor-pointer">
           <li className="flex justify-items-start items-center  hover:bg-[#FF0000] md:rounded-xl p-1">
             <span>
