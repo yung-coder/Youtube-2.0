@@ -10,7 +10,7 @@ const Feed: React.FC<FeedProps> = () => {
 
   return (
     <>
-      <div className="border w-full flex">
+      <div className="border border-red-700 flex-col h-full md:flex md:flex-row">
         <Sidebar category={category} setcategory={setcategory} />
         <div className="flex flex-col">
           <div className="p-4 flex space-x-3 font-bold">

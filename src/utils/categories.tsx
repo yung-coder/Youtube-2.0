@@ -8,7 +8,7 @@ import { GiClothes } from "react-icons/gi";
 
 export const categories = [
   { name: "New", icon: <AiOutlineHome size={20} /> },
-  { name: "JS Mastery", icon: <BsCodeSlash size={20} /> },
+  { name: "JSMastery", icon: <BsCodeSlash size={20} /> },
   { name: "Coding", icon: <BsCodeSlash size={20} /> },
   { name: "ReactJS", icon: <BsCodeSlash size={20} /> },
   { name: "NextJS", icon: <BsCodeSlash size={20} /> },

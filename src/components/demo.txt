@@ -1,0 +1,16 @@
+<div className="p-2 text-white border w-full overflow-auto md:w-60 md:p-0 md:flex md:overflow-hidden">
+        <ul className="p-3 space-x-2 flex  cursor-pointer md:p-5 md:space-x-0 md:flex-col md:space-y-12">
+          {categories.map((category, i) => {
+            return (
+              <li
+                key={i}
+                className="flex justify-items-start items-center bg-slate-600 rounded-xl hover:bg-[#FF0000] md:rounded-xl p-1 md:bg-transparent"
+                onClick={() => setcategory(category.name)}
+              >
+                <span>{category.icon}</span>
+                {category.name}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
