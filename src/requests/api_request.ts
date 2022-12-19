@@ -6,10 +6,7 @@ const options = {
   method: "GET",
   url: BASE_URL,
   params: {
-    relatedToVideoId: "7ghhRHRP6t4",
-    part: "id,snippet",
-    type: "video",
-    maxResults: "50",
+    maxResults: 50,
   },
   headers: {
     "X-RapidAPI-Key": "225e9d1661msh382ffaa868531a6p1d3efajsnb28de9f305f8",

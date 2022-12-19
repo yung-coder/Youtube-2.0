@@ -22,7 +22,7 @@ const Sidebar: React.FC<SidebarProps> = ({ category, setcategory }) => {
               <li
                 key={i}
                 className="flex justify-items-start items-center bg-slate-600 rounded-xl hover:bg-[#FF0000] md:rounded-xl p-1 md:bg-transparent"
-                onClick={() => setcategory(category.name)}
+                onClick={() => setcategory(category.name)}  
               >
                 <span>{category.icon}</span>
                 {category.name}
