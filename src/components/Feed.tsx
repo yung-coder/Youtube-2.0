@@ -19,14 +19,16 @@ const Feed: React.FC<FeedProps> = () => {
   return (
     <>
       <div className="border border-red-700 flex-col h-full md:flex md:flex-row">
-        <Sidebar category={category} setcategory={setcategory} />
+        <div>
+          <Sidebar category={category} setcategory={setcategory} />
+        </div>
         <div className="flex flex-col">
           <div className="p-4 flex space-x-3 font-bold">
             <h1 className="text-white text-xl">{category}</h1>
             <span className="text-red-800 text-xl">Videos</span>
           </div>
-          <div>
-            <Videos  videos={videos}/>
+          <div className="flex border flex-wrap p-2 h-full">
+            <Videos videos={videos} />
           </div>
         </div>
       </div>
