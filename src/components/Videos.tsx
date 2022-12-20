@@ -8,10 +8,10 @@ type VideosProps = {
 
 const Videos: React.FC<VideosProps> = ({ videos }) => {
   return (
-    <div className="flex flex-wrap border border-red-600 p-5 space-x-3 justify-center items-center">
+    <div className="flex flex-wrap border border-blue-800 space-x-3 justify-around h-[733px]  p-4 space-y-2 overflow-auto">
       {videos?.map((items, i) => {
         return (
-          <div key={i} className='border'>
+          <div key={i} className=''>
             {items.id.videoId && <VideoCard items={items}/>}
             {items.id.channelId && <ChannelCard  items={items}/>}
           </div>

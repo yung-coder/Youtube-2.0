@@ -27,7 +27,7 @@ const Feed: React.FC<FeedProps> = () => {
             <h1 className="text-white text-xl">{category}</h1>
             <span className="text-red-800 text-xl">Videos</span>
           </div>
-          <div className="flex border flex-wrap p-2 h-full">
+          <div className=" border  h-full overflow-auto p-2">
             <Videos videos={videos} />
           </div>
         </div>
