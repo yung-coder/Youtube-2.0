@@ -1,3 +1,4 @@
+import millify from "millify";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -19,12 +20,23 @@ const ChannelCard: React.FC<ChannelCardProps> = ({ items }) => {
           </div>
           <div>
             <h2 className="text-white font-bold">
-              {items.snippet.channelTitle}
+              {items.snippet.channelTitle || items.snippet.localized.title}
             </h2>
           </div>
+          {items.statistics ? (
+            <div>
+              <h2 className="text-white font-bold">
+                {millify(items.statistics.subscriberCount)} Subscribes
+              </h2>
+            </div>
+          ) : (
+            <div></div>
+          )}
         </div>
       </Link>
     </>
   );
 };
 export default ChannelCard;
+
+// statistics subscriberCount
