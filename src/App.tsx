@@ -7,6 +7,7 @@ import Feed from "./components/Feed";
 import { Route, Routes } from "react-router-dom";
 import ChannelDetails from "./components/ChannelDetails";
 import SearchFeed from "./components/SearchFeed";
+import Videoinfo from "./components/Videoinfo";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Feed />} />
         <Route path="/channel/:id" element={<ChannelDetails />} />
         <Route path="/search/:id" element={<SearchFeed />} />
+        <Route path="/video/:id" element={<Videoinfo />} />
       </Routes>
     </>
   );

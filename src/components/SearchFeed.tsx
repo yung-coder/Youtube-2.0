@@ -21,7 +21,7 @@ const SearchFeed: React.FC<SearchFeedProps> = () => {
       <div className="border border-red-700 flex-col h-full md:flex md:flex-row">
         <div className="flex flex-col">
           <div className="p-4 flex space-x-3 font-bold">
-            <h1 className="text-white text-xl">{""}</h1>
+            <h1 className="text-white text-xl">{id}</h1>
             <span className="text-red-800 text-xl">Videos</span>
           </div>
           <div className=" border  h-full overflow-auto p-2">
