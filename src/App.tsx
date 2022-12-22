@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
 import { Route, Routes } from "react-router-dom";
 import ChannelDetails from "./components/ChannelDetails";
+import SearchFeed from "./components/SearchFeed";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Feed />} />
         <Route path="/channel/:id" element={<ChannelDetails />} />
+        <Route path="/search/:id" element={<SearchFeed />} />
       </Routes>
     </>
   );
