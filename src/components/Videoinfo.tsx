@@ -4,19 +4,28 @@ import { Link, useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import millify from "millify";
 import { AiFillCheckCircle } from "react-icons/ai";
+import Videos from "./Videos";
 
 type VideoinfoProps = {};
 
 const Videoinfo: React.FC<VideoinfoProps> = () => {
   const { id } = useParams();
   const [videodetails, setvideodetails] = useState(null || Object);
+  const [videos, setvideos] = useState([]);
 
   useEffect(() => {
     fetchFromApi(`videos?part=snippet,statistics&id=${id}`).then((data) => {
       setvideodetails(data.items[0]);
       console.log(data.items[0]);
     });
-  }, []);
+
+    fetchFromApi(`search?part=snippet&relatedToVideoId=${id}&type=video`).then(
+      (data) => {
+        setvideos(data.items);
+        console.log(data.items);
+      }
+    );
+  }, [id]);
 
   if (!videodetails?.snippet) return <div>klkl</div>;
 
@@ -36,12 +45,12 @@ const Videoinfo: React.FC<VideoinfoProps> = () => {
             height={500}
           />
         </div>
-        <div className="flex flex-col  p-5 space-y-4">
+        <div className="flex flex-col  p-8 md:p-5 space-y-4">
           <div>
             <h1 className="text-white font-semibold">{title}</h1>
           </div>
           <div className="flex justify-between text-gray-300">
-            <div className="flex space-x-3 justify-center items-center">
+            <div className="flex space-x-2 md:space-x-3 justify-center items-center">
               <Link to={`/channel/${channelId}`}>
                 <h1>{channelTitle}</h1>
               </Link>
@@ -58,6 +67,8 @@ const Videoinfo: React.FC<VideoinfoProps> = () => {
           </div>
         </div>
       </div>
+
+      <Videos videos={videos} />
     </>
   );
 };
