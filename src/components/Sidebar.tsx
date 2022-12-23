@@ -15,7 +15,7 @@ type SidebarProps = {
 const Sidebar: React.FC<SidebarProps> = ({ category, setcategory }) => {
   return (
     <>
-      <div className="p-2 text-white border w-full overflow-auto md:w-60 md:p-0 md:flex md:overflow-hidden h-full">
+      <div className="p-2 text-white border-r border-gray-400 w-full overflow-auto md:w-60 md:p-0 md:flex md:overflow-hidden h-full">
         <ul className="p-3 space-x-2 flex  cursor-pointer md:p-5 md:space-x-0 md:flex-col md:space-y-12">
           {categories.map((category, i) => {
             return (

@@ -18,13 +18,13 @@ const SearchFeed: React.FC<SearchFeedProps> = () => {
 
   return (
     <>
-      <div className="border border-red-700 flex-col h-full md:flex md:flex-row">
+      <div className="flex-col h-full md:flex md:flex-row">
         <div className="flex flex-col">
           <div className="p-4 flex space-x-3 font-bold">
             <h1 className="text-white text-xl">{id}</h1>
             <span className="text-red-800 text-xl">Videos</span>
           </div>
-          <div className=" border  h-full overflow-auto p-2">
+          <div className="h-full overflow-auto p-2">
             <Videos videos={videos} />
           </div>
         </div>

@@ -18,7 +18,7 @@ const Feed: React.FC<FeedProps> = () => {
 
   return (
     <>
-      <div className="border border-red-700 flex-col h-full md:flex md:flex-row">
+      <div className=" flex-col h-full md:flex md:flex-row">
         <div>
           <Sidebar category={category} setcategory={setcategory} />
         </div>
@@ -27,7 +27,7 @@ const Feed: React.FC<FeedProps> = () => {
             <h1 className="text-white text-xl">{category}</h1>
             <span className="text-red-800 text-xl">Videos</span>
           </div>
-          <div className=" border  h-full overflow-auto p-2">
+          <div className="h-full overflow-auto p-2">
             <Videos videos={videos} />
           </div>
         </div>

@@ -12,7 +12,7 @@ const VideoCard: React.FC<VideoCardProps> = ({ items }) => {
   return (
     <>
       <Link to={items.id.videoId ? `/video/${items.id.videoId}` : ""}>
-        <div>
+        <div className="  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:backdrop-blur-3xl	 duration-300">
           <div className="">
             <img
               src={items.snippet.thumbnails.medium.url}
@@ -31,6 +31,3 @@ const VideoCard: React.FC<VideoCardProps> = ({ items }) => {
   );
 };
 export default VideoCard;
-
-// channelTitle description publishTime
-// channelTitle description publishTime  publishedAt

@@ -37,7 +37,7 @@ const Videoinfo: React.FC<VideoinfoProps> = () => {
   return (
     <>
       <div className="flex flex-col">
-        <div className="w-full flex justify-center items-center border h-[600px]">
+        <div className="w-full flex justify-center items-center  h-[600px]">
           <ReactPlayer
             url={`https://www.youtube.com/watch?v=${id}`}
             controls={true}

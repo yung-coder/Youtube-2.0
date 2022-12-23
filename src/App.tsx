@@ -10,7 +10,6 @@ import SearchFeed from "./components/SearchFeed";
 import Videoinfo from "./components/Videoinfo";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>

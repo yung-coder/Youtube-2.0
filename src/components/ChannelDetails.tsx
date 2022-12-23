@@ -27,12 +27,12 @@ const ChannelDetails: React.FC<ChannelDetailsProps> = () => {
 
   return (
     <>
-      <div className="border flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
         <img src={cover} alt="" className="w-full h-96" />
         <div className="relative bottom-24">
           {channel && <ChannelCard items={channel} />}
         </div>
-        <div className="flex flex-wrap justify-center items-center  border border-red-800 ">
+        <div className="flex flex-wrap justify-center items-center">
           {videos?.map((items, i) => {
             return (
               <div
