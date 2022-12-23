@@ -3,9 +3,10 @@ import React from "react";
 import { IoTerminal } from "react-icons/io5";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
+import { RootVideo } from "../types/Video";
 
 type VideoCardProps = {
-  items: any;
+  items: RootVideo;
 };
 
 const VideoCard: React.FC<VideoCardProps> = ({ items }) => {

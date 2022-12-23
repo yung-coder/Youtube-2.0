@@ -12,7 +12,6 @@ const SearchFeed: React.FC<SearchFeedProps> = () => {
   useEffect(() => {
     fetchFromApi(`search?part=snippet&q=${id}`).then((data) => {
       setvideos(data.items);
-      console.log(data.items);
     });
   }, []);
 

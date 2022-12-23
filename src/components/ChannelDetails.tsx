@@ -14,13 +14,11 @@ const ChannelDetails: React.FC<ChannelDetailsProps> = () => {
   useEffect(() => {
     fetchFromApi(`channels?snippet&id=${id}`).then((data) => {
       setchannel(data.items[0]);
-      console.log(data.items);
     });
 
     fetchFromApi(`search?channelId=${id}&part=snippet&order=date`).then(
       (data) => {
         setvideos(data.items);
-        console.log(data.items);
       }
     );
   }, [id]);

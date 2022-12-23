@@ -1,6 +1,7 @@
 import millify from "millify";
 import React from "react";
 import { Link } from "react-router-dom";
+import { RootVideo } from "../types/Video";
 
 type ChannelCardProps = {
   items: any;

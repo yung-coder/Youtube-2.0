@@ -3,11 +3,12 @@ import React, { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
 import { fetchFromApi } from "../requests/api_request";
 import Videos from "./Videos";
+import { Root } from "../types/Videos";
 type FeedProps = {};
 
 const Feed: React.FC<FeedProps> = () => {
   const [category, setcategory] = useState("New");
-  const [videos, setvideos] = useState([]);
+  const [videos, setvideos] = useState<Root>([]);
 
   useEffect(() => {
     fetchFromApi(`search?part=snippet&q=${category}`).then((data) => {

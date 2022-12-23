@@ -1,9 +1,11 @@
 import React from "react";
+import { RootVideo } from "../types/Video";
+import { Root, Root2 } from "../types/Videos";
 import ChannelCard from "./ChannelCard";
 import VideoCard from "./VideoCard";
 
 type VideosProps = {
-  videos: any[];
+  videos: Root;
 };
 
 const Videos: React.FC<VideosProps> = ({ videos }) => {
