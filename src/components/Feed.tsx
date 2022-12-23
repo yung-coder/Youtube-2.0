@@ -13,7 +13,6 @@ const Feed: React.FC<FeedProps> = () => {
   useEffect(() => {
     fetchFromApi(`search?part=snippet&q=${category}`).then((data) => {
       setvideos(data.items);
-      console.log(data.items);
     });
   }, [category]);
 

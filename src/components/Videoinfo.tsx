@@ -5,13 +5,15 @@ import ReactPlayer from "react-player";
 import millify from "millify";
 import { AiFillCheckCircle } from "react-icons/ai";
 import Videos from "./Videos";
+import { RootVideoDetail } from "../types/videoDetails";
+import { Root, Root2 } from "../types/Videos";
 
 type VideoinfoProps = {};
 
 const Videoinfo: React.FC<VideoinfoProps> = () => {
   const { id } = useParams();
-  const [videodetails, setvideodetails] = useState(null || Object);
-  const [videos, setvideos] = useState([]);
+  const [videodetails, setvideodetails] = useState<RootVideoDetail>();
+  const [videos, setvideos] = useState<Root>([]);
 
   useEffect(() => {
     fetchFromApi(`videos?part=snippet,statistics&id=${id}`).then((data) => {
@@ -58,10 +60,10 @@ const Videoinfo: React.FC<VideoinfoProps> = () => {
             </div>
             <div className="flex space-x-3">
               <div className="flex space-x-1">
-                <h1>{millify(likeCount)}</h1> <span>Likes</span>
+                <h1>{millify(Number(likeCount))}</h1> <span>Likes</span>
               </div>
               <div className="flex space-x-1">
-                <h1>{millify(viewCount)}</h1> <span>Views</span>
+                <h1>{millify(Number(viewCount))}</h1> <span>Views</span>
               </div>
             </div>
           </div>

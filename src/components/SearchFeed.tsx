@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { fetchFromApi } from "../requests/api_request";
 import Videos from "./Videos";
 import { useParams } from "react-router-dom";
+import { Root } from "../types/Videos";
 
 type SearchFeedProps = {};
 
 const SearchFeed: React.FC<SearchFeedProps> = () => {
-  const [videos, setvideos] = useState([]);
+  const [videos, setvideos] = useState<Root>([]);
   const { id } = useParams();
 
   useEffect(() => {
