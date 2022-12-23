@@ -37,13 +37,15 @@ const Videoinfo: React.FC<VideoinfoProps> = () => {
   return (
     <>
       <div className="flex flex-col">
-        <div className="w-full flex justify-center items-center  h-[600px]">
-          <ReactPlayer
-            url={`https://www.youtube.com/watch?v=${id}`}
-            controls={true}
-            width="100%"
-            height={500}
-          />
+        <div className="w-full flex justify-center items-center  h-[600px]  backdrop-sepia">
+          <div className="w-full">
+            <ReactPlayer
+              url={`https://www.youtube.com/watch?v=${id}`}
+              controls={true}
+              width="100%"
+              height={500}
+            />
+          </div>
         </div>
         <div className="flex flex-col  p-8 md:p-5 space-y-4">
           <div>

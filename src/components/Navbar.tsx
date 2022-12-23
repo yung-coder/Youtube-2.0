@@ -42,10 +42,10 @@ const Navbar: React.FC<NavbarProps> = () => {
   console.log(searchTermmobile);
   return (
     <>
-      <div className="flex justify-between md:p-4">
+      <div className="flex justify-between p-5 md:p-4">
         <div className="flex justify-center items-center space-x-4">
           <GiHamburgerMenu color="white" className="block  md:hidden" />
-          <h1 className="text-red-700">Youtube</h1>
+          <h1 className="text-[#FF0000] text-xl font-bold">Youtube</h1>
         </div>
         <form action="sumbit" className="flex  justify-center items-center">
           <input
