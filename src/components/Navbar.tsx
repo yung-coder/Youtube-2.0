@@ -5,6 +5,7 @@ import { AiFillVideoCamera } from "react-icons/ai";
 import { AiOutlineBell } from "react-icons/ai";
 import { VscAccount } from "react-icons/vsc";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 type NavbarProps = {};
 
 const Navbar: React.FC<NavbarProps> = () => {
@@ -45,7 +46,9 @@ const Navbar: React.FC<NavbarProps> = () => {
       <div className="flex justify-between p-5 md:p-4">
         <div className="flex justify-center items-center space-x-4">
           <GiHamburgerMenu color="white" className="block  md:hidden" />
-          <h1 className="text-[#FF0000] text-xl font-bold">Youtube</h1>
+          <Link to={"/"}>
+            <h1 className="text-[#FF0000] text-xl font-bold">Youtube</h1>
+          </Link>
         </div>
         <form action="sumbit" className="flex  justify-center items-center">
           <input

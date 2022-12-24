@@ -34,6 +34,11 @@ const ChannelDetails: React.FC<ChannelDetailsProps> = () => {
         <div className="relative bottom-24">
           {channel && <ChannelCard items={channel} />}
         </div>
+        <div className="w-full flex justify-center items-center">
+          <h1 className="text-gray-400 hover:text-white cursor-pointer font-bold text-2xl  hover:underline hover:decoration-slate-50">
+            Videos
+          </h1>
+        </div>
         <div className="flex flex-wrap justify-center items-center">
           {videos?.map((items, i) => {
             return (
