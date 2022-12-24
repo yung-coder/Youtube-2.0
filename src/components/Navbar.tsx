@@ -40,7 +40,6 @@ const Navbar: React.FC<NavbarProps> = () => {
     }
   };
 
-  console.log(searchTermmobile);
   return (
     <>
       <div className="flex justify-between p-5 md:p-4">

@@ -13,7 +13,6 @@ type VideoCardProps = {
 };
 
 const VideoCard: React.FC<VideoCardProps> = ({ items, loading }) => {
-  console.log(loading);
   return (
     <>
       {!loading ? (
