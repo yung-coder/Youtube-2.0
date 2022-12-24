@@ -58,11 +58,11 @@ const Navbar: React.FC<NavbarProps> = () => {
             className="rounded-l-lg p-1 bg-[#121212] placeholder:text-white border  text-white hidden md:block"
             placeholder="Search"
           />
-          <div className="h-full justify-center items-center p-1 rounded-r-lg ml-52 bg-transparent hidden md:flex md:ml-0 md:bg-[#222] md:border">
+          <div className="h-full cursor-pointer justify-center items-center p-1 rounded-r-lg ml-52 bg-transparent hidden md:flex md:ml-0 md:bg-[#222] md:border">
             <BsSearch color="white" onClick={Onclick} />
           </div>
         </form>
-        <div className="flex justify-center  items-center md:space-x-6">
+        <div className="flex justify-center  items-center md:space-x-6 cursor-pointer">
           <AiFillVideoCamera
             color="white"
             className="hidden md:block md:w-full"

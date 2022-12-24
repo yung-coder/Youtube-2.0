@@ -29,7 +29,7 @@ const Feed: React.FC<FeedProps> = () => {
         <div className="flex flex-col">
           <div className="p-4 flex space-x-3 font-bold">
             <h1 className="text-white text-xl">{category}</h1>
-            <span className="text-red-800 text-xl">Videos</span>
+            <span className="text-[#FF0000] text-xl">Videos</span>
           </div>
           <div className="h-full overflow-auto p-2">
             <Videos videos={videos} loading={loadingVidocard}/>
