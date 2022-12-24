@@ -4,16 +4,20 @@ import Sidebar from "./Sidebar";
 import { fetchFromApi } from "../requests/api_request";
 import Videos from "./Videos";
 import { Root } from "../types/Videos";
+import LoaderVideoCard from "./LoaderVideoCard";
 type FeedProps = {};
 
 const Feed: React.FC<FeedProps> = () => {
   const [category, setcategory] = useState("New");
   const [videos, setvideos] = useState<Root>([]);
+  const [loadingVidocard, setloadingVideo] = useState(false);
 
   useEffect(() => {
+    setloadingVideo(true);
     fetchFromApi(`search?part=snippet&q=${category}`).then((data) => {
       setvideos(data.items);
     });
+    setloadingVideo(false)
   }, [category]);
 
   return (
@@ -28,7 +32,7 @@ const Feed: React.FC<FeedProps> = () => {
             <span className="text-red-800 text-xl">Videos</span>
           </div>
           <div className="h-full overflow-auto p-2">
-            <Videos videos={videos} />
+            <Videos videos={videos} loading={loadingVidocard}/>
           </div>
         </div>
       </div>

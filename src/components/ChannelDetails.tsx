@@ -10,8 +10,10 @@ const ChannelDetails: React.FC<ChannelDetailsProps> = () => {
   const { id } = useParams();
   const [channel, setchannel] = useState(null);
   const [videos, setvideos] = useState([]);
+  const [loading, setloading] = useState(false);
 
   useEffect(() => {
+    setloading(true);
     fetchFromApi(`channels?snippet&id=${id}`).then((data) => {
       setchannel(data.items[0]);
     });
@@ -21,6 +23,8 @@ const ChannelDetails: React.FC<ChannelDetailsProps> = () => {
         setvideos(data.items);
       }
     );
+
+    setloading(false);
   }, [id]);
 
   return (
@@ -33,11 +37,8 @@ const ChannelDetails: React.FC<ChannelDetailsProps> = () => {
         <div className="flex flex-wrap justify-center items-center">
           {videos?.map((items, i) => {
             return (
-              <div
-                key={i}
-                className="flex p-8"
-              >
-                {items && <VideoCard items={items} />}
+              <div key={i} className="flex p-8">
+                {items && <VideoCard items={items} loading={loading} />}
               </div>
             );
           })}

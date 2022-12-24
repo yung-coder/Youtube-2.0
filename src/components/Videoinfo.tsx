@@ -14,8 +14,10 @@ const Videoinfo: React.FC<VideoinfoProps> = () => {
   const { id } = useParams();
   const [videodetails, setvideodetails] = useState<RootVideoDetail>();
   const [videos, setvideos] = useState<Root>([]);
+  const [loading , setloading] = useState(false);
 
   useEffect(() => {
+    setloading(true);
     fetchFromApi(`videos?part=snippet,statistics&id=${id}`).then((data) => {
       setvideodetails(data.items[0]);
     });
@@ -25,6 +27,7 @@ const Videoinfo: React.FC<VideoinfoProps> = () => {
         setvideos(data.items);
       }
     );
+    setloading(false);
   }, [id]);
 
   if (!videodetails?.snippet) return <div>klkl</div>;
@@ -70,7 +73,7 @@ const Videoinfo: React.FC<VideoinfoProps> = () => {
         </div>
       </div>
 
-      <Videos videos={videos} />
+      <Videos videos={videos}  loading={loading}/>
     </>
   );
 };
