@@ -7,7 +7,7 @@ import { VscAccount } from "react-icons/vsc";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 type NavbarProps = {};
-
+ 
 const Navbar: React.FC<NavbarProps> = () => {
   const inputRef = React.useRef<HTMLInputElement | null>(null);
   const [searchTerm, setsearchTerm] = useState("");
