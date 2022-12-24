@@ -22,7 +22,7 @@ const Feed: React.FC<FeedProps> = () => {
 
   return (
     <>
-      <div className=" flex-col h-full md:flex md:flex-row">
+      <div className="flex-col h-full md:flex md:flex-row">
         <div>
           <Sidebar category={category} setcategory={setcategory} />
         </div>
