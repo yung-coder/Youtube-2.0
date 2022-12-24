@@ -45,7 +45,6 @@ const Navbar: React.FC<NavbarProps> = () => {
     <>
       <div className="flex justify-between p-5 md:p-4">
         <div className="flex justify-center items-center space-x-4">
-          <GiHamburgerMenu color="white" className="block  md:hidden" />
           <Link to={"/"}>
             <h1 className="text-[#FF0000] text-xl font-bold">Youtube</h1>
           </Link>
@@ -71,22 +70,24 @@ const Navbar: React.FC<NavbarProps> = () => {
           <VscAccount color="white" className="w-full md:block" />
         </div>
       </div>
-      <form
-        className="flex md:hidden p-3 space-x-2  justify-center items-center"
-        action="sumbit"
-      >
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={(e) => setsearchTerm(e.target.value)}
-          className="w-full text-white  bg-[#121212] placeholder:text-white border border-slate-400"
-          ref={inputRef}
-          placeholder="Search"
-        />
-        <div className="">
-          <BsSearch color="white" onClick={Onclick} />
-        </div>
-      </form>
+      <div className="flex justify-center items-center">
+        <form
+          className="flex md:hidden p-3   justify-center items-center"
+          action="sumbit"
+        >
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setsearchTerm(e.target.value)}
+            className="rounded-l-lg p-1 bg-[#121212] placeholder:text-white border  text-white flex md:hidden"
+            ref={inputRef}
+            placeholder="Search"
+          />
+          <div className="border h-full p-2 rounded-r-lg cursor-pointer bg-[#222]">
+            <BsSearch color="white" onClick={Onclick} size={16} />
+          </div>
+        </form>
+      </div>
     </>
   );
 };
