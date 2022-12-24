@@ -4,6 +4,7 @@ import { IoTerminal } from "react-icons/io5";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
 import { RootVideo } from "../types/Video";
+import { Root } from "../types/Videos";
 import LoaderVideoCard from "./LoaderVideoCard";
 
 type VideoCardProps = {

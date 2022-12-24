@@ -12,7 +12,7 @@ type VideosProps = {
 const Videos: React.FC<VideosProps> = ({ videos, loading }) => {
   return (
     <div className="flex flex-wrap  scroll-smooth space-y-4  space-x-3 justify-around h-[733px]  p-4  overflow-auto">
-      {videos?.map((items, i) => {
+      {videos?.map((items: any, i) => {
         return (
           <div key={i} className="">
             {items.id.videoId && <VideoCard items={items} loading={loading} />}

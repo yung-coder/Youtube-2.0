@@ -8,8 +8,6 @@ export interface Root2 {
 
 export interface Id {
   [x: string]: JSX.Element
-  kind: string
-  videoId: string
 }
 
 export interface Snippet {
