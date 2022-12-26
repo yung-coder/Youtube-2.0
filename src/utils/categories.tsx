@@ -14,7 +14,7 @@ export const categories = [
   { name: "NextJS", icon: <BsCodeSlash size={20} /> },
   { name: "Music", icon: <BsMusicNote size={20} /> },
   { name: "Education", icon: <IoSchoolOutline size={20} /> },
-  { name: "Saiman Says", icon: <AiOutlineYoutube size={20} /> },
+  { name: "SaimanSays", icon: <AiOutlineYoutube size={20} /> },
   { name: "Sport", icon: <MdOutlineSportsFootball size={20} /> },
   { name: "Fashion", icon: <GiClothes size={20} /> },
 ];
